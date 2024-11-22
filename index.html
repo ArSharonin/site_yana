@@ -3,147 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Для тебя</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Georgia', serif;
-            background-color: #fdf7f2;
-            color: #444;
-            text-align: center;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px 15px;
-        }
-        .title {
-            font-size: 2.5em;
-            color: #555;
-            margin-bottom: 20px;
-        }
-        .message {
-            margin: 20px 0;
-            padding: 15px;
-            background-color: #fff;
-            border: 1px solid #f2dede;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .carousel {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            max-width: 600px;
-            margin: 20px auto;
-            border-radius: 10px;
-        }
-        .carousel-track {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        .carousel img {
-            width: 100%;
-            flex-shrink: 0;
-            border-radius: 10px;
-            object-fit: cover;
-            filter: blur(5px);
-            transition: filter 0.3s ease;
-        }
-        .carousel img.active {
-            filter: blur(0);
-        }
-        .carousel-buttons {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-            z-index: 10;
-        }
-        .carousel-buttons button {
-            background-color: rgba(128, 128, 128, 0.3);
-            border: none;
-            padding: 15px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 24px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .carousel-buttons button:hover {
-            background-color: rgba(128, 128, 128, 0.5);
-        }
-        .carousel::before, .carousel::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 40px;
-            background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
-            z-index: 10;
-        }
-        .carousel::after {
-            right: 0;
-            background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
-        }
-        .carousel::before {
-            left: 0;
-            background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
-        }
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>С любовью к тебе</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <div class="title">Для тебя, моя любовь</div>
-        <div class="message">
-            <p>Каждое мгновение с тобой — это счастье. Пусть этот сайт напоминает тебе, как ты дорога мне.</p>
-        </div>
-        <div class="carousel">
-            <div class="carousel-track">
-                <img class="active" src="https://via.placeholder.com/600x400" alt="Фото 1">
-                <img src="https://via.placeholder.com/600x400" alt="Фото 2">
-                <img src="https://via.placeholder.com/600x400" alt="Фото 3">
+        <div class="content">
+            <div class="image">
+                <img src="your-photo.jpg" alt="Твое фото" />
             </div>
-            <div class="carousel-buttons">
-                <button class="prev">‹</button>
-                <button class="next">›</button>
+            <div class="text">
+                <h1>С любовью к тебе</h1>
+                <p>Ты — моё вдохновение.</p>
+                <p>Каждый день с тобой — это подарок.</p>
+                <p>С тобой я чувствую себя живым.</p>
             </div>
         </div>
     </div>
-    <script>
-        const track = document.querySelector('.carousel-track');
-        const images = Array.from(track.children);
-        const prevButton = document.querySelector('.prev');
-        const nextButton = document.querySelector('.next');
-        let currentIndex = 0;
-
-        function updateCarousel() {
-            // Убираем активный класс у всех изображений
-            images.forEach(img => img.classList.remove('active'));
-            // Добавляем активный класс только текущему изображению
-            images[currentIndex].classList.add('active');
-            const offset = -currentIndex * images[0].clientWidth;
-            track.style.transform = `translateX(${offset}px)`;
-        }
-
-        prevButton.addEventListener('click', () => {
-            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
-            updateCarousel();
-        });
-
-        nextButton.addEventListener('click', () => {
-            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
-            updateCarousel();
-        });
-
-        // Включаем цикличность прокрутки (сразу от последнего к первому)
-        setInterval(() => {
-            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
-            updateCarousel();
-        }, 5000);
-    </script>
 </body>
 </html>
