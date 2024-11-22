@@ -5,44 +5,31 @@ body {
     background: #f0f0f0;
 }
 
-.carousel {
-    position: relative;
+.swiper-container {
+    width: 100%;
     max-width: 800px;
     margin: auto;
-    overflow: hidden;
+    position: relative;
 }
 
-.carousel-images {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.carousel-images img {
+.swiper-slide img {
     width: 100%;
     height: auto;
     border-radius: 10px;
 }
 
-button {
-    position: absolute;
-    top: 50%;
+/* Стили для кнопок навигации */
+.swiper-button-next,
+.swiper-button-prev {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    border: none;
     padding: 10px;
     cursor: pointer;
     z-index: 1;
-    transform: translateY(-50%);
+    border-radius: 50%;
 }
 
-button.prev {
-    left: 0;
-}
-
-button.next {
-    right: 0;
-}
-
-button:hover {
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
