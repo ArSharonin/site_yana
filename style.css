@@ -58,7 +58,8 @@ p {
 
 .swiper-slide img {
     width: 100%;
-    height: auto;
+    height: 400px;  /* Фиксированная высота для всех изображений */
+    object-fit: cover;  /* Сохраняет пропорции изображения, обрезая лишнее */
     border-radius: 10px;
 }
 
