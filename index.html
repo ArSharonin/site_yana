@@ -40,16 +40,20 @@
             margin: 20px auto;
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            background: #fff;
         }
         .carousel-track {
             display: flex;
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.5s ease-in-out;
         }
         .carousel img {
             width: 100%;
             flex-shrink: 0;
             border-radius: 10px;
+            filter: blur(5px);
+            transition: filter 0.3s ease;
+        }
+        .carousel img.active {
+            filter: blur(0);
         }
         .carousel-buttons {
             position: absolute;
@@ -60,16 +64,16 @@
             transform: translateY(-50%);
         }
         .carousel-buttons button {
-            background-color: rgba(255, 255, 255, 0.5);
+            background-color: rgba(255, 255, 255, 0.7);
             border: none;
-            padding: 10px;
+            padding: 15px;
             border-radius: 50%;
             cursor: pointer;
             font-size: 24px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         .carousel-buttons button:hover {
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.9);
         }
         .carousel::before, .carousel::after {
             content: '';
@@ -98,7 +102,7 @@
         </div>
         <div class="carousel">
             <div class="carousel-track">
-                <img src="https://via.placeholder.com/600x400" alt="Фото 1">
+                <img class="active" src="https://via.placeholder.com/600x400" alt="Фото 1">
                 <img src="https://via.placeholder.com/600x400" alt="Фото 2">
                 <img src="https://via.placeholder.com/600x400" alt="Фото 3">
             </div>
@@ -116,6 +120,10 @@
         let currentIndex = 0;
 
         function updateCarousel() {
+            // Убираем активный класс у всех изображений
+            images.forEach(img => img.classList.remove('active'));
+            // Добавляем активный класс только текущему изображению
+            images[currentIndex].classList.add('active');
             const offset = -currentIndex * images[0].clientWidth;
             track.style.transform = `translateX(${offset}px)`;
         }
