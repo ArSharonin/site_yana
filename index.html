@@ -62,18 +62,19 @@
             display: flex;
             justify-content: space-between;
             transform: translateY(-50%);
+            z-index: 10;
         }
         .carousel-buttons button {
-            background-color: rgba(128, 128, 128, 0.5);
+            background-color: rgba(128, 128, 128, 0.3);
             border: none;
-            padding: 10px;
+            padding: 15px;
             border-radius: 50%;
             cursor: pointer;
             font-size: 24px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         .carousel-buttons button:hover {
-            background-color: rgba(128, 128, 128, 0.7);
+            background-color: rgba(128, 128, 128, 0.5);
         }
         .carousel::before, .carousel::after {
             content: '';
