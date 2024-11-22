@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Фото Карусель</title>
+    <title>С любовью к тебе</title>
     <!-- Подключаем Swiper CSS -->
     <link
       rel="stylesheet"
@@ -12,22 +12,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="image1.jpg" alt="Фото 1" />
-            </div>
-            <div class="swiper-slide">
-                <img src="image2.jpg" alt="Фото 2" />
-            </div>
-            <div class="swiper-slide">
-                <img src="image3.jpg" alt="Фото 3" />
-            </div>
+    <div class="container">
+        <!-- Текст -->
+        <div class="text">
+            <h1>С любовью к тебе</h1>
+            <p>Ты — моё вдохновение.</p>
+            <p>Каждый день с тобой — это подарок.</p>
+            <p>С тобой я чувствую себя живым.</p>
         </div>
 
-        <!-- Кнопки навигации -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <!-- Фото-карусель -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="image1.jpg" alt="Фото 1" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="image2.jpg" alt="Фото 2" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="image3.jpg" alt="Фото 3" />
+                </div>
+            </div>
+
+            <!-- Кнопки навигации -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
     </div>
 
     <!-- Подключаем Swiper JS -->
