@@ -24,7 +24,9 @@ body {
 .text {
     color: #333;
     text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.7);
-    margin-bottom: 30px; /* Расстояние между текстом и каруселью */
+    margin-bottom: 30px; /* Расстояние между текстом и каруселью на мобильных устройствах */
+    z-index: 10;
+    position: relative;
 }
 
 h1 {
@@ -67,13 +69,33 @@ p {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Адаптивность */
+/* Адаптивность для мобильных */
 @media screen and (max-width: 768px) {
-    h1 {
-        font-size: 2em;
+    .container {
+        padding-top: 60px; /* Расстояние сверху для мобильных */
     }
 
-    p {
-        font-size: 1em;
+    .text {
+        margin-bottom: 30px; /* Расстояние между текстом и каруселью на мобильных устройствах */
+    }
+}
+
+/* Эффект для десктопа - текст поверх карусели */
+@media screen and (min-width: 769px) {
+    .container {
+        position: relative;
+    }
+
+    .text {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        width: 100%;
+    }
+
+    .swiper-container {
+        margin-top: 60px; /* Отступ снизу для слайдера */
     }
 }
