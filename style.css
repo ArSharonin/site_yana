@@ -18,15 +18,20 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    position: relative;
 }
 
 /* Стили текста */
 .text {
     color: #333;
     text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.7);
-    margin-bottom: 30px; /* Расстояние между текстом и каруселью на мобильных устройствах */
+    margin-bottom: 30px; /* Расстояние между текстом и каруселью */
     z-index: 10;
-    position: relative;
+    position: absolute;  /* Абсолютное позиционирование */
+    top: 20px;  /* Расстояние сверху */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
 }
 
 h1 {
@@ -45,6 +50,7 @@ p {
     max-width: 800px;
     margin: auto;
     position: relative;
+    z-index: 1; /* Карусель будет находиться под текстом */
 }
 
 .swiper-slide img {
@@ -66,36 +72,3 @@ p {
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-/* Адаптивность для мобильных */
-@media screen and (max-width: 768px) {
-    .container {
-        padding-top: 60px; /* Расстояние сверху для мобильных */
-    }
-
-    .text {
-        margin-bottom: 30px; /* Расстояние между текстом и каруселью на мобильных устройствах */
-    }
-}
-
-/* Эффект для десктопа - текст поверх карусели */
-@media screen and (min-width: 769px) {
-    .container {
-        position: relative;
-    }
-
-    .text {
-        position: absolute;
-        top: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 10;
-        width: 100%;
-    }
-
-    .swiper-container {
-        margin-top: 60px; /* Отступ снизу для слайдера */
-    }
-}
