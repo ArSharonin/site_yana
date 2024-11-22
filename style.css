@@ -62,20 +62,10 @@ p {
     border-radius: 10px;
 }
 
-/* Стили для кнопок навигации */
+/* Убираем стрелки */
 .swiper-button-next,
 .swiper-button-prev {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 1;
-    border-radius: 50%;
-}
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+    display: none; /* Убираем стрелки */
 }
 
 /* Адаптивность */
