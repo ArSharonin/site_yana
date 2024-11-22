@@ -13,12 +13,16 @@ body {
     position: relative;
 }
 
+/* Контейнер */
 .container {
     width: 90%;
     max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    height: 80%; /* Для более симметричного расположения */
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Элементы внутри контейнера будут расположены по вертикали */
 }
 
 /* Стили текста */
@@ -47,8 +51,7 @@ p {
 /* Карусель */
 .swiper-container {
     width: 100%;
-    max-width: 800px;
-    margin: auto;
+    height: 100%; /* Заполняет всю высоту контейнера */
     position: relative;
     z-index: 1; /* Карусель будет находиться под текстом */
 }
@@ -72,3 +75,16 @@ p {
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Адаптивность */
+@media screen and (max-width: 768px) {
+    .container {
+        padding-top: 60px; /* Расстояние сверху для мобильных */
+    }
+
+    .text {
+        margin-bottom: 30px; /* Расстояние между текстом и каруселью */
+    }
+}
