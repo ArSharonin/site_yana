@@ -17,22 +17,22 @@ body {
 .container {
     width: 90%;
     max-width: 800px;
-    height: 80%; /* Для более симметричного расположения */
+    height: 80%;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Элементы внутри контейнера будут расположены по вертикали */
+    flex-direction: column;
 }
 
 /* Стили текста */
 .text {
     color: #333;
     text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.7);
-    margin-bottom: 30px; /* Расстояние между текстом и каруселью */
+    margin-bottom: 30px;
     z-index: 10;
-    position: absolute;  /* Абсолютное позиционирование */
-    top: 20px;  /* Расстояние сверху */
+    position: absolute;
+    top: 20px;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -51,9 +51,9 @@ p {
 /* Карусель */
 .swiper-container {
     width: 100%;
-    height: 100%; /* Заполняет всю высоту контейнера */
+    height: 100%;
     position: relative;
-    z-index: 1; /* Карусель будет находиться под текстом */
+    z-index: 1;
 }
 
 .swiper-slide img {
@@ -61,6 +61,12 @@ p {
     height: 400px;  /* Фиксированная высота для всех изображений */
     object-fit: cover;  /* Сохраняет пропорции изображения, обрезая лишнее */
     border-radius: 10px;
+    opacity: 0;  /* Начинаем с невидимости */
+    transition: opacity 0.5s ease-in-out;  /* Плавное появление */
+}
+
+.swiper-slide.swiper-slide-visible img {
+    opacity: 1;  /* Делаем изображение видимым, когда оно активно */
 }
 
 /* Убираем стрелки */
@@ -72,10 +78,10 @@ p {
 /* Адаптивность */
 @media screen and (max-width: 768px) {
     .container {
-        padding-top: 60px; /* Расстояние сверху для мобильных */
+        padding-top: 60px;
     }
 
     .text {
-        margin-bottom: 30px; /* Расстояние между текстом и каруселью */
+        margin-bottom: 30px;
     }
 }
