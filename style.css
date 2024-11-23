@@ -1,55 +1,49 @@
-/* Основной стиль страницы */
+/* Основные стили */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #F5F5FA; /* Светлый фон */
-    color: #444;
-    text-align: center;
-    line-height: 1.5;
+    background: linear-gradient(180deg, #FFF6E5, #FDE2C6); /* Тёплый летний градиент */
+    color: #333;
 }
 
+/* Заголовок и текст */
 header {
+    text-align: center;
     padding: 20px;
 }
 
 h1 {
-    font-size: 2rem;
-    color: #ff6f61;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
+    color: #FF6F61;
+    font-family: 'Dancing Script', cursive; /* Можно заменить */
 }
 
 p {
-    font-size: 1rem;
-    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: #555;
 }
 
 /* Галерея */
-.gallery {
-    margin: 20px auto;
-    max-width: 1200px;
-    padding: 0 10px;
-}
-
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
 }
 
 .grid img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Чтобы изображения выглядели аккуратно */
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
-/* Адаптивность */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    p {
-        font-size: 0.9rem;
-    }
+.grid img:hover {
+    transform: scale(1.05);
 }
