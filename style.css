@@ -7,7 +7,7 @@ body, html {
 
 /* Фон с картинкой */
 body {
-    background-image: url('path/to/your/image.jpg'); /* Путь к картинке */
+    background-image: url('https://avatars.mds.yandex.net/i?id=6168af76e2512e217ddc59198551496d_l-5440433-images-thumbs&n=13'); /* Путь к картинке */
     background-size: cover;  /* Покрывает весь экран */
     background-position: center center;  /* Центрирует изображение */
     background-attachment: fixed;  /* Фиксирует фон при прокрутке */
