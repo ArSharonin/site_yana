@@ -4,24 +4,31 @@ body {
     font-family: Arial, sans-serif;
     background: linear-gradient(180deg, #FFF6E5, #FDE2C6); /* Тёплый летний градиент */
     color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Занимает всю высоту экрана */
 }
 
 /* Заголовок и текст */
 header {
     text-align: center;
     padding: 20px;
+    width: 100%;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #FF6F61;
     font-family: 'Dancing Script', cursive; /* Можно заменить */
+    margin-bottom: 10px;
 }
 
 p {
-    max-width: 800px;
+    max-width: 90%;
     margin: 0 auto;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #555;
 }
 
@@ -30,13 +37,15 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
     padding: 20px;
+    width: 100%;
+    max-width: 1000px; /* Ограничиваем ширину */
 }
 
 .grid img {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     object-fit: cover; /* Чтобы изображения выглядели аккуратно */
     margin: 10px;
     border-radius: 8px;
@@ -46,4 +55,25 @@ p {
 
 .grid img:hover {
     transform: scale(1.05);
+}
+
+/* Мобильные устройства */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid img {
+        width: 80%;
+        height: auto;
+    }
 }
