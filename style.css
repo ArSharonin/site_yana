@@ -70,11 +70,11 @@ body {
     overflow: hidden; /* Скрывает лишний текст */
 }
 
-/* Применение настроек шрифта к heart */
+/* Применение настроек шрифта к heart-text */
 .heart-text {
     font-size: 2vw;
     position: absolute;
-    top: 30%;
+    top: 20%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
