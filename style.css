@@ -54,16 +54,6 @@ body {
     white-space: nowrap; /* Запрещает перенос текста на следующую строку */
 }
 
-/* Применение настроек шрифта к heart-text */
-.heart-text {
-    font-size: 6vw;
-    position: absolute;
-    top: 16%;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-}
-
 /* Применение настроек шрифта к subtitle-text */
 .subtitle-text {
     font-family: 'AlumniSansPinstripe-Italic', sans-serif;
