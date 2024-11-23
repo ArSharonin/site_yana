@@ -1,87 +1,70 @@
-/* Общие стили */
+/* Основные стили */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to bottom, #f0f8ff, #f7e6e1); /* Пастельный фон */
-    color: #333;
+    font-family: 'Arial', sans-serif;
+    background-color: #FDF6E3; /* Тёплый, летний оттенок */
+    color: #444;
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
+    justify-content: center;
+    min-height: 100vh;
     text-align: center;
-    position: relative;
 }
 
-/* Контейнер */
-.container {
-    width: 90%;
+.content {
     max-width: 800px;
-    height: 80%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-/* Стили текста */
-.text {
-    color: #333;
-    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.7);
-    margin-bottom: 30px;
-    z-index: 10;
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
+    margin: 0 20px;
 }
 
 h1 {
-    font-size: 2.5em;
-    margin: 20px 0;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 p {
-    font-size: 1.2em;
-    margin: 10px 0;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 15px 0;
 }
 
-/* Карусель */
-.swiper-container {
+/* Стили карусели */
+.carousel {
+    position: relative;
+    max-width: 100%;
+    height: 300px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    position: relative;
-    z-index: 1;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
-.swiper-slide img {
-    width: 100%;
-    height: 400px;  /* Фиксированная высота для всех изображений */
-    object-fit: cover;  /* Сохраняет пропорции изображения, обрезая лишнее */
-    border-radius: 10px;
-    opacity: 0;  /* Начинаем с невидимости */
-    transition: opacity 0.5s ease-in-out;  /* Плавное появление */
-}
-
-.swiper-slide.swiper-slide-visible img {
-    opacity: 1;  /* Делаем изображение видимым, когда оно активно */
-}
-
-/* Убираем стрелки */
-.swiper-button-next,
-.swiper-button-prev {
-    display: none; /* Убираем стрелки */
+.carousel img.active {
+    opacity: 1;
 }
 
 /* Адаптивность */
-@media screen and (max-width: 768px) {
-    .container {
-        padding-top: 60px;
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
     }
 
-    .text {
-        margin-bottom: 30px;
+    p {
+        font-size: 1rem;
+    }
+
+    .carousel {
+        height: 200px;
     }
 }
