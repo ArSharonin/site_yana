@@ -70,6 +70,16 @@ body {
     overflow: hidden; /* Скрывает лишний текст */
 }
 
+/* Применение настроек шрифта к heart */
+.heart-text {
+    font-size: 2vw;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
 /* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
     .heading-text {
