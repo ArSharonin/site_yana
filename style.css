@@ -58,7 +58,7 @@ body {
 .heart-text {
     font-size: 6vw;
     position: absolute;
-    top: 10%;
+    top: 16%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
