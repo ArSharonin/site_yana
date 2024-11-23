@@ -12,31 +12,11 @@ body {
     background-position: center center;  /* Центрирует изображение */
     background-attachment: fixed;  /* Фиксирует фон при прокрутке */
     background-repeat: no-repeat;  /* Не повторяет картинку */
-    height: 100%;  /* Занимает весь экран */
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-/* Контейнер для контента */
-.content {
-    text-align: center;
-    color: white;
-    font-family: Arial, sans-serif;
-}
-
-/* Адаптивность для мобильных */
-@media (max-width: 768px) {
-    body {
-        background-attachment: fixed;  /* На мобильных устройствах фон прокручивается */
-    }
-}
-
-/* Адаптивность для мобильных */
-@media (max-width: 480px) {
-    body {
-        background-attachment: fixed;  /* На мобильных устройствах фон прокручивается */
-    }
+    min-height: 100vh; /* Для корректного отображения */
+    font-family: Arial, sans-serif; /* Общий шрифт */
 }
 
 /* Подключение шрифта */
@@ -54,92 +34,64 @@ body {
     font-style: normal;
 }
 
-/* Контейнер */
-body {
-    position: relative;  /* Устанавливаем позицию для body, чтобы элементы внутри него могли позиционироваться относительно этого блока */
-    height: 100vh;  /* Чтобы body занимал всю высоту экрана */
+/* Контейнер для контента */
+.content {
+    text-align: center;
+    color: white;
 }
 
-/* Применение настроек шрифта к heading-text для десктоп устройств */
+/* Применение настроек шрифта к heading-text */
 .heading-text {
     font-family: 'GreatVibes-Regular', sans-serif;
     font-size: 5vw;
-    position: absolute;  /* Позиционируем текст */
-    top: 10%;  /* Опускаем текст на 10% от верхней границы экрана */
-    left: 50%;  /* Центрируем текст по горизонтали */
-    transform: translateX(-50%);  /* Точно центрируем текст */
-    color: #ff09ab; /* Цвет текста */
-	
-    text-align: center; /* Выравнивание текста по ширине */
-    font-weight: bold; /* Сделать текст жирным */
-    
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ff09ab;
+    text-align: center;
+    font-weight: bold;
     white-space: nowrap; /* Запрещает перенос текста на следующую строку */
 }
 
-/* Применение настроек к heading-text для мобильных устройств */
-@media (max-width: 768px) {
-    .heading-text {
-        font-size: 300%; /* Уменьшаем размер шрифта на мобильных */
-        position: absolute;  /* Позиционируем текст */
-        top: 6%;  /* Опускаем текст на 10% от верхней границы экрана */
-        left: 50%;  /* Центрируем текст по горизонтали */
-        transform: translateX(-50%);  /* Точно центрируем текст */
-	color: #ff09ab; /* Цвет текста */
-	
-	text-align: center; /* Выравнивание текста по ширине */
-    	font-weight: bold; /* Сделать текст жирным */
-    
-    	white-space: nowrap; /* Запрещает перенос текста на следующую строку */
-    }
-}
-
-/* Применение настроек шрифта к subtitle-text для десктоп устройств */
+/* Применение настроек шрифта к subtitle-text */
 .subtitle-text {
     font-family: 'AlumniSansPinstripe-Italic', sans-serif;
     font-size: 2vw;
-    position: absolute;  /* Позиционируем текст */
-    top: 25%;  /* Опускаем текст на 30% от верхней границы экрана */
-    left: 50%;  /* Центрируем текст по горизонтали */
-    transform: translateX(-50%);  /* Точно центрируем текст */
-    color: #fff; /* Цвет текста */
-
-    text-align: center; /* Выравнивание текста по ширине */
-    font-weight: bold; /* Сделать текст жирным */
-    
-    white-space: nowrap; /* Запрещает перенос текста на следующую строку */
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    white-space: nowrap; /* Запрещает перенос текста */
     max-width: 100%; /* Ограничивает ширину текста */
-    overflow: hidden; /* Скрывает лишний текст, если он выходит за пределы блока */
+    overflow: hidden; /* Скрывает лишний текст */
 }
 
-/* Применение настроек шрифта к subtitle-text для мобильных устройств */
+/* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
+    .heading-text {
+        font-size: 300%; /* Увеличиваем размер шрифта на мобильных */
+        top: 6%;
+    }
+
     .subtitle-text {
         font-size: 5vw; /* Уменьшаем размер шрифта на мобильных */
-        position: absolute;  /* Позиционируем текст */
-        top: 20%;  /* Опускаем текст на 30% от верхней границы экрана */
-        left: 50%;  /* Центрируем текст по горизонтали */
-        transform: translateX(-50%);  /* Точно центрируем текст */
-        color: #fff; /* Цвет текста */
+        top: 20%;
+    }
 
-        text-align: center; /* Выравнивание текста по ширине */
-        font-weight: bold; /* Сделать текст жирным */
-        
-        white-space: nowrap; /* Запрещает перенос текста на следующую строку */
-        max-width: 100%; /* Ограничивает ширину текста */
-        overflow: hidden; /* Скрывает лишний текст, если он выходит за пределы блока */
+    .photo {
+        max-width: 60%; /* Увеличиваем ширину изображения на мобильных устройствах */
     }
 }
 
-/* Общие стили для страницы */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+/* Стили для очень маленьких экранов (например, телефоны в портретной ориентации) */
+@media (max-width: 480px) {
+    .photo {
+        max-width: 70%; /* Еще больше увеличиваем ширину изображения на маленьких экранах */
+    }
 }
 
 /* Контейнер для фотографии */
@@ -154,18 +106,4 @@ body {
     height: auto;    /* Автоматическая высота */
     border-radius: 10px; /* Скругление углов */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для фото */
-}
-
-/* Стили для мобильных устройств */
-@media (max-width: 768px) {
-    .photo {
-        max-width: 60%; /* Увеличиваем ширину изображения на мобильных устройствах */
-    }
-}
-
-/* Стили для очень маленьких экранов (например, телефоны в портретной ориентации) */
-@media (max-width: 480px) {
-    .photo {
-        max-width: 70%; /* Еще больше увеличиваем ширину изображения на маленьких экранах */
-    }
 }
