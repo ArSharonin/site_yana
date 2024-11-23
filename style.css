@@ -54,6 +54,16 @@ body {
     white-space: nowrap; /* Запрещает перенос текста на следующую строку */
 }
 
+/* Применение настроек шрифта к heart-text */
+.heart-text {
+    font-size: 5vw;
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
 /* Применение настроек шрифта к subtitle-text */
 .subtitle-text {
     font-family: 'AlumniSansPinstripe-Italic', sans-serif;
@@ -68,16 +78,6 @@ body {
     white-space: nowrap; /* Запрещает перенос текста */
     max-width: 100%; /* Ограничивает ширину текста */
     overflow: hidden; /* Скрывает лишний текст */
-}
-
-/* Применение настроек шрифта к heart-text */
-.heart-text {
-    font-size: 2vw;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
 }
 
 /* Адаптивность для мобильных устройств */
