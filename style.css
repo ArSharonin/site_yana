@@ -79,19 +79,14 @@ body {
 /* Применение настроек шрифта к subtitle-text для десктоп устройств */
 .subtitle-text {
     font-family: 'AlumniSansPinstripe-Italic', sans-serif;
-    font-size: 1.2vw;
+    font-size: 1.4vw;
     position: absolute;  /* Позиционируем текст */
     top: 30%;  /* Опускаем текст на 30% от верхней границы экрана */
     left: 50%;  /* Центрируем текст по горизонтали */
     transform: translateX(-50%);  /* Точно центрируем текст */
     color: #fff; /* Цвет текста */
 
-    max-width: 700px; /* Максимальная ширина для текста */
-    word-wrap: break-word; /* Автоматически переносит слова на новую строку */
-    overflow-wrap: break-word; /* Совместимость с другими браузерами */
-    line-height: 1.2; /* Высота строки для лучшего восприятия */
-    padding: 10px; /* Отступы */
-    text-align: justify; /* Выравнивание текста по ширине */
+    text-align: center; /* Выравнивание текста по ширине */
     font-weight: bold; /* Сделать текст жирным */
 }
 
@@ -105,12 +100,33 @@ body {
         transform: translateX(-50%);  /* Точно центрируем текст */
         color: #fff; /* Цвет текста */
 
-        max-width: 500px; /* Максимальная ширина для текста */
-        word-wrap: break-word; /* Автоматически переносит слова на новую строку */
-        overflow-wrap: break-word; /* Совместимость с другими браузерами */
-        line-height: 1.5; /* Высота строки для лучшего восприятия */
-        padding: 10px; /* Отступы */
-        text-align: justify; /* Выравнивание текста по ширине */
+        text-align: center; /* Выравнивание текста по ширине */
         font-weight: bold; /* Сделать текст жирным */
     }
+}
+
+/* Общие стили для страницы */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Контейнер для фотографии */
+.photo-container {
+    text-align: center;
+    margin-top: 350px; /* Отступ сверху для контейнера */
+}
+
+/* Стили для фотографии */
+.photo {
+    max-width: 30%; /* Ограничиваем ширину изображения */
+    height: auto;    /* Автоматическая высота */
+    border-radius: 10px; /* Скругление углов */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для фото */
 }
