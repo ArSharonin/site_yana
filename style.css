@@ -32,6 +32,13 @@ body {
     }
 }
 
+/* Адаптивность для мобильных */
+@media (max-width: 480px) {
+    body {
+        background-attachment: fixed;  /* На мобильных устройствах фон прокручивается */
+    }
+}
+
 /* Подключение шрифта */
 @font-face {
     font-family: 'GreatVibes-Regular';  /* Название шрифта */
