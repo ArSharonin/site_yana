@@ -7,7 +7,7 @@ body, html {
 
 /* Фон с картинкой */
 body {
-    background-image: url('/images/background.jpg'); /* Путь к картинке */
+    background-image: url('images/background.jpg'); /* Путь к картинке */
     background-size: cover;  /* Покрывает весь экран */
     background-position: center center;  /* Центрирует изображение */
     background-attachment: fixed;  /* Фиксирует фон при прокрутке */
