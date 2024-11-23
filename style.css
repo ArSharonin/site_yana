@@ -35,7 +35,14 @@ body {
 /* Подключение шрифта */
 @font-face {
     font-family: 'GreatVibes-Regular';  /* Название шрифта */
-    src: url('files/GreatVibes-Regular.ttf') format('woff'),  /* Путь к шрифту */
+    src: url('files/GreatVibes-Regular.ttf') format('ttf'),  /* Путь к шрифту */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AlumniSansPinstripe-Italic';  /* Название шрифта */
+    src: url('files/AlumniSansPinstripe-Italic.ttf') format('ttf'),  /* Путь к шрифту */
     font-weight: normal;
     font-style: normal;
 }
@@ -46,7 +53,7 @@ body {
     height: 100vh;  /* Чтобы body занимал всю высоту экрана */
 }
 
-/* Применение шрифта к тексту заголовка для десктоп устройств */
+/* Применение настроек шрифта к heading-text для десктоп устройств */
 .heading-text {
     font-family: 'GreatVibes-Regular', sans-serif;
     font-size: 600%;
@@ -56,12 +63,33 @@ body {
     transform: translateX(-50%);  /* Точно центрируем текст */
 }
 
-/* Применение шрифта к тексту заголовка для мобильных устройств */
+/* Применение настроек к heading-text для мобильных устройств */
 @media (max-width: 768px) {
     .heading-text {
         font-size: 200%; /* Уменьшаем размер шрифта на мобильных */
         position: absolute;  /* Позиционируем текст */
         top: 10%;  /* Поднимаем текст на 10% от верхней границы экрана */
+        left: 50%;  /* Центрируем текст по горизонтали */
+        transform: translateX(-50%);  /* Точно центрируем текст */
+    }
+}
+
+/* Применение настроек шрифта к subtitle-text для десктоп устройств */
+.subtitle-text {
+    font-family: 'AlumniSansPinstripe-Italic', sans-serif;
+    font-size: 600%;
+    position: absolute;  /* Позиционируем текст */
+    top: 20%;  /* Поднимаем текст на 10% от верхней границы экрана */
+    left: 50%;  /* Центрируем текст по горизонтали */
+    transform: translateX(-50%);  /* Точно центрируем текст */
+}
+
+/* Применение настроек шрифта к subtitle-text для мобильных устройств */
+@media (max-width: 768px) {
+    .subtitle-text {
+        font-size: 200%; /* Уменьшаем размер шрифта на мобильных */
+        position: absolute;  /* Позиционируем текст */
+        top: 20%;  /* Поднимаем текст на 10% от верхней границы экрана */
         left: 50%;  /* Центрируем текст по горизонтали */
         transform: translateX(-50%);  /* Точно центрируем текст */
     }
