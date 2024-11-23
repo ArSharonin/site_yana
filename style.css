@@ -35,14 +35,14 @@ body {
 /* Подключение шрифта */
 @font-face {
     font-family: 'GreatVibes-Regular';  /* Название шрифта */
-    src: url('files/GreatVibes-Regular.ttf') format('ttf'),  /* Путь к шрифту */
+    src: url('files/GreatVibes-Regular.ttf') format('woff'),  /* Путь к шрифту */
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'AlumniSansPinstripe-Italic';  /* Название шрифта */
-    src: url('files/AlumniSansPinstripe-Italic.ttf') format('ttf'),  /* Путь к шрифту */
+    src: url('files/AlumniSansPinstripe-Italic.ttf') format('woff'),  /* Путь к шрифту */
     font-weight: normal;
     font-style: normal;
 }
