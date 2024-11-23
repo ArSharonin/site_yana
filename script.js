@@ -1,13 +1,13 @@
-// Инициализация Swiper с автопрокруткой и предварительной загрузкой изображений
-var swiper = new Swiper('.swiper-container', {
-    loop: true,  // Зацикливаем карусель
-    autoplay: {
-        delay: 3000,  // Время между слайдами (3 секунды)
-        disableOnInteraction: false,  // Автопрокрутка не останавливается при взаимодействии
-    },
-    preloadImages: true,  // Включаем предварительную загрузку изображений
-    speed: 3000,  // Время для полного перехода между слайдами (3 секунды)
-    slidesPerView: 1,  // Показываем по одному слайду
-    spaceBetween: 10,  // Пробел между слайдами
-    watchOverflow: true,  // Останавливает карусель, если слайды кончились
+document.addEventListener("DOMContentLoaded", () => {
+    const images = document.querySelectorAll(".carousel img");
+    let currentIndex = 0;
+
+    function showNextImage() {
+        images[currentIndex].classList.remove("active");
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].classList.add("active");
+    }
+
+    // Запускаем смену изображений каждые 3 секунды
+    setInterval(showNextImage, 3000);
 });
