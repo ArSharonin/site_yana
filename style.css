@@ -18,6 +18,12 @@ body {
     align-items: center;
 }
 
+/* На мобильных устройствах фон не должен прокручиваться */
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;  /* На мобильных устройствах фон прокручивается */
+    }
+
 /* Контейнер для контента */
 .content {
     text-align: center;
