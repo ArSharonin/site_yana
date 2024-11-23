@@ -1,79 +1,33 @@
-/* Основные стили */
-body {
+/* Убираем отступы и поля для body */
+body, html {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(180deg, #FFF6E5, #FDE2C6); /* Тёплый летний градиент */
-    color: #333;
+    padding: 0;
+    height: 100%;
+}
+
+/* Фон с картинкой */
+body {
+    background-image: url('path/to/your/image.jpg'); /* Путь к картинке */
+    background-size: cover;  /* Покрывает весь экран */
+    background-position: center center;  /* Центрирует изображение */
+    background-attachment: fixed;  /* Фиксирует фон при прокрутке */
+    background-repeat: no-repeat;  /* Не повторяет картинку */
+    height: 100%;  /* Занимает весь экран */
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: center;
-    min-height: 100vh; /* Занимает всю высоту экрана */
 }
 
-/* Заголовок и текст */
-header {
+/* Контейнер для контента */
+.content {
     text-align: center;
-    padding: 20px;
-    width: 100%;
+    color: white;
+    font-family: Arial, sans-serif;
 }
 
-h1 {
-    font-size: 2rem;
-    color: #FF6F61;
-    font-family: 'Dancing Script', cursive; /* Можно заменить */
-    margin-bottom: 10px;
-}
-
-p {
-    max-width: 90%;
-    margin: 0 auto;
-    font-size: 1rem;
-    color: #555;
-}
-
-/* Галерея */
-.grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    padding: 20px;
-    width: 100%;
-    max-width: 1000px; /* Ограничиваем ширину */
-}
-
-.grid img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover; /* Чтобы изображения выглядели аккуратно */
-    margin: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-.grid img:hover {
-    transform: scale(1.05);
-}
-
-/* Мобильные устройства */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-
-    .grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .grid img {
-        width: 80%;
-        height: auto;
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;  /* На мобильных устройствах фон прокручивается */
     }
 }
