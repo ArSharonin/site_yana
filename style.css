@@ -47,7 +47,7 @@ body {
 }
 
 /* Применение шрифта к тексту заголовка для десктоп устройств */
-.custom-font {
+.heading-text {
     font-family: 'GreatVibes-Regular', sans-serif;
     font-size: 600%;
     position: absolute;  /* Позиционируем текст */
@@ -58,7 +58,7 @@ body {
 
 /* Применение шрифта к тексту заголовка для мобильных устройств */
 @media (max-width: 768px) {
-    .custom-font {
+    .heading-text {
         font-size: 200%; /* Уменьшаем размер шрифта на мобильных */
         position: absolute;  /* Позиционируем текст */
         top: 10%;  /* Поднимаем текст на 10% от верхней границы экрана */
