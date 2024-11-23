@@ -31,3 +31,11 @@ body {
         background-attachment: scroll;  /* На мобильных устройствах фон прокручивается */
     }
 }
+
+/* Подключение шрифта */
+@font-face {
+    font-family: 'GreatVibes-Regular';  /* Название шрифта */
+    src: url('files/GreatVibes-Regular.ttf') format('woff'),  /* Путь к шрифту */
+    font-weight: normal;
+    font-style: normal;
+}
