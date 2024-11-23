@@ -44,3 +44,16 @@ body {
 .custom-font {
     font-family: 'GreatVibes-Regular', sans-serif;
 }
+
+/* Размер шрифта для десктопных устройств */
+.custom-font {
+    font-family: 'MyCustomFont', sans-serif;
+    font-size: 136px;
+}
+
+/* Размер шрифта для мобильных устройств */
+@media (max-width: 768px) {
+    .custom-font {
+        font-size: 24px; /* Уменьшаем размер шрифта на мобильных */
+    }
+}
