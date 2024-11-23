@@ -39,3 +39,8 @@ body {
     font-weight: normal;
     font-style: normal;
 }
+
+/* Применение шрифта к тексту заголовка */
+.custom-font {
+    font-family: 'GreatVibes-Regular', sans-serif;
+}
