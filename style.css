@@ -79,7 +79,7 @@ body {
 
     .subtitle-text {
         font-size: 2vw; /* Уменьшаем размер шрифта на мобильных */
-        top: 27%;
+        top: 25%;
     }
 
     .photo {
